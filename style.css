@@ -1,0 +1,266 @@
+*{
+	margin: 0px;
+	border: 0px;
+	font-family: 'Nunito', sans-serif;
+	/* border: 2px solid red; */
+}
+
+html{
+	scroll-behavior: smooth;
+}
+
+div{
+	/* border: solid; */
+}
+
+#container{
+	background-color: #fff;
+	margin: 0;
+	width: 100%;
+	height: 100vh; /* unit = viewportheight */
+	position: relative; /* relative placement of contents */
+}
+
+.navbar{
+	display: flex; /* side by side placement of contents instead of vertical placement */
+	justify-content: space-between; /* creates space between child contents */
+	width: 85% ;
+	margin-left: 7%;
+	align-items: center;
+	/* border: 2px solid blue; */
+}
+
+nav ul li{
+	display: inline-block;
+	list-style: none;
+	margin: 10px 20px;
+}
+
+a{
+	text-decoration: none;
+}
+
+nav ul li a{
+	font-weight: bold;
+	color: chocolate;
+	width: 5%;
+}
+
+.logo{
+	width: 100px;
+}
+
+/* syntax */
+/* tag:pseudo-class{property:value} */
+
+nav ul li a:hover{
+	color: black;
+}
+
+.title{
+	margin-left: 8%;
+	margin-top: 13%;
+}
+
+.title h1{
+	font-size: 50px;
+	margin-bottom: 50px;
+}
+
+.medhu{
+	color: chocolate;
+}
+
+.download{
+	border-radius: 5px;
+	background-color: black;
+	color: #fff;
+	padding: 10px 20px;
+	font-weight: bold;
+	margin-top: 30px;
+	display: inline-block;
+}
+
+.image{
+	width: 45%;
+	height: 80%;
+	position: absolute;
+	right: 30px;
+	bottom: 0px;
+}
+
+.image img{
+	position: absolute;
+	height: 100%;
+	left: 50%;
+	bottom: 0px;
+	transform: translateX(-50%);
+	/* transform: scale(100%); */
+	transition: bottom 1s , left 2s ;
+	/* transition: 2s; */
+}
+
+.image:hover #shape{
+	bottom: 70px;
+}
+
+.image:hover #model{
+	left: 40%;
+}
+
+#about , #skills {
+	margin: 15% 8%;
+}
+
+#contact{
+	margin: 10% 8% 0% 8%;
+}
+
+.heading{
+	text-align: center;
+}
+
+.heading h2{
+	font-size: 30px;
+}
+
+.heading span{
+	font-size: 20px;
+	color: green;
+}
+
+.about-content , .skill-content{
+	display: grid;
+	grid-template-columns: repeat(2,1fr); /* 1fr = 255px */
+	gap: 2rem; /* 1rem = 16px */
+	margin-top: 2rem;
+}
+
+.about-image img , .skill-image img{
+	width:80%;
+	border-radius: 2rem;
+}
+
+.infos{
+	margin-top: 2rem;
+}
+.info-box{
+	margin-bottom: 10px;
+}
+
+.about-details p{
+	text-align: justify;
+}
+.info-box span{
+	margin-left: 1rem;
+}
+
+.progress-div{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1rem 0px;
+	margin: 8px;
+	position: relative;
+	/* height: 30px; */
+}
+
+
+
+.base-bar{
+	width: 100%;
+	height: 0.5rem;
+	background-color: black;
+	border-radius: 0.5rem;
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+}
+
+.bar95{
+	background-color: orange;
+	width: 95%;
+}
+
+.bar70{
+	background-color: orange;
+	width: 70%;
+}
+
+.bar0{
+	background-color: orange;
+	width: 0%;
+}
+
+.icon-set{
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 3%;
+}
+
+.icon{
+	margin: 10px;
+	width: 50px;
+	height: 50px;
+	/* border: 1px solid; */
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.icon i{
+	color: black;	
+}
+
+.icon:hover{
+	background-image: linear-gradient(to bottom right , yellow , red);
+}
+
+.icon:hover i{
+	color:#fff;
+	transform: scale(120%);
+	animation: shake 1s;
+}
+
+@keyframes shake {
+	10%{
+		transform: rotate(15deg);
+	}
+	20%{
+		transform: rotate(-15deg);
+	}
+	30%{
+		transform: rotate(15deg);
+	}
+	40%{
+		transform: rotate(-15deg);
+	}
+	/* 50%{
+		color: red;
+		transform: scale(150%);
+	}
+	75%{
+		color: green;
+		transform: scale(200%);
+	}
+	100%{
+		color: blue;
+		transform: scale(250%);
+	}
+	 */
+}
+
+.copyright{
+	text-align: center;
+	font-weight: bold;
+	/* margin: 5% 8% 0% 8%; */
+}
+
+.up-arrow{
+	background-image: linear-gradient(to bottom right , yellow , red);
+	float: right;
+	margin: 0px 10px 50px 0px;
+}
